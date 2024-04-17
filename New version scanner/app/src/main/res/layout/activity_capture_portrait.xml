@@ -1,0 +1,40 @@
+<!-- res/layout/activity_capture_portrait.xml -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/main_container"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white">
+
+        <FrameLayout
+            android:id="@+id/scanner_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/statusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="100sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <fragment
+                    android:id="@+id/scannerFragment"
+                    android:name="com.example.scanner.ScannerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageButton
+                    android:id="@+id/btnChangeServer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/change_server_description"
+                    android:src="@android:drawable/ic_menu_manage" />
+
+        </FrameLayout>
+
+</FrameLayout>
